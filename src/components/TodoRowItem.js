@@ -1,7 +1,11 @@
-function TodoRowItem(){
+function TodoRowItem(props){
     return (
-        <row></row>
+        <tr>
+            <th scope='row'>{props.rowSerial}</th>
+            <td>{props.rowDescription}</td>
+            <td>{props.rowAssigned}</td>
+        </tr>
     );
 }
 
-export default TodoRowItem();
+export default TodoRowItem;
