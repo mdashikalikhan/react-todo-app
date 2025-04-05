@@ -14,7 +14,7 @@ function TodoTable({todos}){
             <tbody>
                 {
                     todos.map((todo)=>(
-                        <TodoRowItem rowSerial={todo.rowSerial}
+                        <TodoRowItem key={todo.rowSerial} rowSerial={todo.rowSerial}
                         rowDescription={todo.rowDescription}
                         rowAssigned={todo.rowAssigned}/>
                     ))

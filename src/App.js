@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import TodoTable from './components/TodoTable';
 import { useState } from 'react';
+import NewTodoForm from './components/NewTodoForm';
 
 
 function App() {
@@ -11,14 +12,14 @@ function App() {
     {rowSerial:4, rowDescription: 'Description 4', rowAssigned: 'Assigned 4'}
   ]);
 
-  const addTodo = ()=>{
+  const addTodo = (assigned, description)=>{
     /* console.log('todo button has been clicked!'); */
     let sl = 1
     if(todos.length>0){
-      sl = todos.length + 1;
+      sl = todos[todos.length-1].rowSerial + 1;
     }
     const newTodo = {
-      rowSerial:sl, rowDescription: 'Description ' + sl, rowAssigned: 'Assigned ' + sl
+      rowSerial:sl, rowDescription: description, rowAssigned: assigned
     };
 
     setTodos([...todos, newTodo]);
@@ -33,9 +34,11 @@ function App() {
         </div>
         <div className="card-body">
           <TodoTable todos={todos}/>
-          <button className='btn btn-primary' onClick={()=>{addTodo()}}>
+          {/* <button className='btn btn-primary' onClick={()=>{addTodo()}}> */}
+          <button className='btn btn-primary'>
             Add new todo
           </button>
+          <NewTodoForm addTodo={addTodo}/>
         </div>
       </div>
 
