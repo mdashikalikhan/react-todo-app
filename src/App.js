@@ -25,6 +25,15 @@ function App() {
     setTodos([...todos, newTodo]);
   }
 
+  const deleteTodo = (rowNum)=>{
+    let filtered = todos.filter(
+      function(val){
+        return val.rowSerial!==rowNum;
+      }
+    );
+    setTodos(filtered);
+  }
+
   return (
     <div className='mt-5 container'>
 
