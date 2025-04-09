@@ -16,7 +16,7 @@ function TodoTable({todos}){
                     todos.map((todo)=>(
                         <TodoRowItem key={todo.rowSerial} rowSerial={todo.rowSerial}
                         rowDescription={todo.rowDescription}
-                        rowAssigned={todo.rowAssigned}/>
+                        rowAssigned={todo.rowAssigned} deleteTodo={todos.deleteTodo}/>
                     ))
                 }
                 

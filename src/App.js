@@ -42,7 +42,7 @@ function App() {
           Your Todo's
         </div>
         <div className="card-body">
-          <TodoTable todos={todos}/>
+          <TodoTable todos={todos} deleteTodo={deleteTodo}/>
           {/* <button className='btn btn-primary' onClick={()=>{addTodo()}}> */}
           <button className='btn btn-primary'>
             Add new todo
