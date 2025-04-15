@@ -1,6 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var Circle_1 = require("./Circle");
 var Customer_1 = require("./Customer");
+var Rectangle_1 = require("./Rectangle");
+var Shape_1 = require("./Shape");
 var myCustV1 = new Customer_1.CutomerV1("MD. ASHIK", "ALI KHAN");
 console.log(myCustV1.firstName);
 console.log(myCustV1.lastName);
+var myShape = new Shape_1.Shape(10, 20);
+console.log(myShape.getInfo());
+var myCircle = new Circle_1.Circle(5, 10, 20);
+console.log(myCircle.getInfo());
+var myRectangle = new Rectangle_1.Rectangle(0, 0, 100, 200);
+console.log(myRectangle.getInfo());

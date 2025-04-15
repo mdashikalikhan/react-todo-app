@@ -41,6 +41,3 @@ var CutomerV1 = /** @class */ (function () {
     return CutomerV1;
 }());
 exports.CutomerV1 = CutomerV1;
-var myCustV1 = new CutomerV1("MD. ASHIK", "ALI KHAN");
-console.log(myCustV1.firstName);
-console.log(myCustV1.lastName);
