@@ -1,5 +1,5 @@
 
-export class Shape{
+export abstract class Shape{
     
     
 
@@ -26,4 +26,6 @@ export class Shape{
     getInfo(): string{
         return `x=${this._x}, y=${this._y}`;
     }
+
+    abstract calculateArea():number;
 }
