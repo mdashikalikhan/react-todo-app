@@ -1,4 +1,9 @@
-function TodoRowItem(props: {rowSerial: number; rowDescription: string; rowAssigned: string; deleteTodo: Function}){
+export const TodoRowItem: React.FC<{
+    rowSerial: number; 
+    rowDescription: string; rowAssigned: string; 
+    deleteTodo: Function
+}> = (props) =>
+{
     return (
         <tr onClick={()=>props.deleteTodo(props.rowSerial)}>
             <th scope='row'>{props.rowSerial}</th>
@@ -8,4 +13,4 @@ function TodoRowItem(props: {rowSerial: number; rowDescription: string; rowAssig
     );
 }
 
-export default TodoRowItem;
+/* export default TodoRowItem; */

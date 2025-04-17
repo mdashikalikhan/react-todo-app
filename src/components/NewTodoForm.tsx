@@ -2,7 +2,7 @@ import React from "react";
 
 import { useState } from "react";
 
-function NewTodoForm(props){
+export const  NewTodoForm: React.FC<{addTodo: Function}> = (props)=>{
 
     const [assigned, setAssigned] = useState('');
 
@@ -42,4 +42,4 @@ function NewTodoForm(props){
     );
 }
 
-export default NewTodoForm;
+/* export default NewTodoForm; */

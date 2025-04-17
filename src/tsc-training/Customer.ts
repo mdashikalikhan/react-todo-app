@@ -1,4 +1,4 @@
-class Customer {
+/* class Customer {
     firstName : string;
     lastName : string;
     
@@ -8,7 +8,7 @@ let myCustomer = new Customer();
 myCustomer.firstName = 'MD ASHIK';
 myCustomer.lastName = 'ALI KHAN';
 
-console.log(myCustomer);
+console.log(myCustomer); */
 
 export class CutomerV1{
     /* private _firstName: string;
