@@ -73,3 +73,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 Go to the react project.
 
 Run command **npm install --save typescript @types/node @types/react @types/react-dom @types/jest**
+
+### Create typescript configuration file i.e. tsconfig.json
+
+Run Command  **npx tsc --init**
