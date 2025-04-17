@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import TodoTable from './components/TodoTable';
 import { useState } from 'react';
 import NewTodoForm from './components/NewTodoForm';
+import React from 'react';
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
     {rowSerial:4, rowDescription: 'Description 4', rowAssigned: 'Assigned 4'}
   ]);
 
-  const addTodo = (assigned, description)=>{
+  const addTodo = (assigned: string, description: string)=>{
     /* console.log('todo button has been clicked!'); */
     let sl = 1
     if(todos.length>0){
@@ -25,7 +26,7 @@ function App() {
     setTodos([...todos, newTodo]);
   }
 
-  const deleteTodo = (rowNum)=>{
+  const deleteTodo = (rowNum: number)=>{
     let filtered = todos.filter(
       function(val){
         return val.rowSerial!==rowNum;
